@@ -1,5 +1,6 @@
 package com.jefferson.midiaplayer;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     ImageView play, pause, stop, proxima;
+    MediaPlayer midiaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +23,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initComponentes();
+
+        midiaPlayer = MediaPlayer.create(this,R.raw.nothing);
+
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(midiaPlayer != null){
+                    midiaPlayer.start();
+                }
+
                 Toast.makeText(getApplicationContext(), "Você clicou no botão play", Toast.LENGTH_LONG).show();
             }
         });
@@ -31,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(midiaPlayer != null){
+                    midiaPlayer.pause();
+                }
                 Toast.makeText(getApplicationContext(), "Você clicou no botão pause", Toast.LENGTH_LONG).show();
             }
         });
@@ -38,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(midiaPlayer != null){
+                    midiaPlayer.stop();
+                }
                 Toast.makeText(getApplicationContext(), "Você clicou no botão stop", Toast.LENGTH_LONG).show();
             }
         });
