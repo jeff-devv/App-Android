@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0720A9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"/>
+
+    <EditText android:id="@+id/exnome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ex: Joaquim Ferreira Neto"
+        android:textSize="15sp"
+        android:textColor="#B6B6B6"
+        app:layout_constraintTop_toBottomOf="@id/nome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView android:id="@+id/cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0720A9"
+        app:layout_constraintTop_toTopOf="@id/exnome"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"/>
+
+    <EditText android:id="@+id/excpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ex: 000.000.000-00"
+        android:textSize="15sp"
+        android:textColor="#B6B6B6"
+        app:layout_constraintTop_toBottomOf="@id/cpf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView android:id="@+id/nascimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data de Nascimento"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0720A9"
+        app:layout_constraintTop_toTopOf="@id/excpf"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"/>
+
+    <EditText android:id="@+id/exnascimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ex: 19/05/2003"
+        android:textSize="15sp"
+        android:textColor="#B6B6B6"
+        app:layout_constraintTop_toBottomOf="@id/nascimento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView android:id="@+id/mae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome da Mãe"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0720A9"
+        app:layout_constraintTop_toTopOf="@id/exnascimento"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"/>
+
+    <EditText android:id="@+id/exmae"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ex: Ana Paula Gonçalves Ferreira"
+        android:textSize="15sp"
+        android:textColor="#B6B6B6"
+        app:layout_constraintTop_toBottomOf="@id/mae"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <Button android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:textColor="#FF5F03"
+        android:textSize="18sp"
+        android:backgroundTint="#FAFAFA"
+        app:layout_constraintTop_toBottomOf="@id/exmae"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cornerRadius="5dp"
+        android:padding="10dp"/>
+
+    <Button android:id="@+id/btnEntrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:backgroundTint="#FF5F03"
+        app:layout_constraintTop_toBottomOf="@id/btnVoltar"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cornerRadius="5dp"
+        android:padding="10dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
