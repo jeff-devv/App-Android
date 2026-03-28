@@ -1,4 +1,3 @@
-login
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -21,20 +20,18 @@ login
             android:layout_marginTop="50dp"
             android:src="@drawable/logo" />
 
-        <EditText
-            android:id="@+id/edt_email"
+        <EditText android:id="@+id/edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/borda"
             android:hint="Informe o E-mail"
             android:inputType="textEmailAddress"
             android:padding="15dp" />
 
-        <EditText
-            android:id="@+id/edt_senha"
+        <EditText android:id="@+id/edt_senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -45,8 +42,7 @@ login
             android:inputType="numberPassword"
             android:padding="15dp" />
 
-        <TextView
-            android:id="@+id/mensagem_erro"
+        <TextView android:id="@+id/mensagem_erro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -54,8 +50,7 @@ login
             android:textSize="16sp"
             android:textStyle="italic" />
 
-        <Button
-            android:id="@+id/btn_entar"
+        <Button android:id="@+id/btn_entrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -68,8 +63,7 @@ login
             android:textStyle="bold"
             app:cornerRadius="5dp" />
 
-        <TextView
-            android:id="@+id/txt_criar_conta"
+        <TextView android:id="@+id/txt_criar_conta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -78,8 +72,7 @@ login
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <ProgressBar
-            android:id="@+id/progress_bar"
+        <ProgressBar android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

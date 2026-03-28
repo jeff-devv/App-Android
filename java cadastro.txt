@@ -14,31 +14,31 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class LoginActivity extends AppCompatActivity {
-    EditText email, senha;
-    TextView erro, criarConta;
-    Button entrar;
+public class MainActivity extends AppCompatActivity {
+
+    EditText nome, email, senha;
+    Button cadastrar;
+    TextView possuiConta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_main);
 
         initComponentes();
-        entrar.setOnClickListener(new View.OnClickListener() {
+        cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Cliquei no botão entrar", Toast.LENGTH_LONG).show();
-                //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                //startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Clicou no botão cadastrar", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
             }
         });
-        criarConta.setOnClickListener(new View.OnClickListener() {
+        possuiConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Clicou no botão criar conta", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,10 +51,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void initComponentes() {
-        email      = findViewById(R.id.edt_email);
-        senha      = findViewById(R.id.edt_senha);
-        erro       = findViewById(R.id.mensagem_erro);
-        criarConta = findViewById(R.id.txt_criar_conta);
-        entrar     = findViewById(R.id.btn_entrar);
+        nome = findViewById(R.id.edt_cadastro_nome);
+        email = findViewById(R.id.edt_cadastro_email);
+        senha = findViewById(R.id.edt_cadastro_senha);
+        cadastrar = findViewById(R.id.btn_cadastrar);
+        possuiConta = findViewById(R.id.txt_possui_conta);
     }
 }
